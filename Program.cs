@@ -20,11 +20,16 @@ int cantidadPendiente =10;
  
 TareasPendientes = CrearTareas(cantidadPendiente);
 // TareasCompletadas = CrearTareas(cantidadCompletada);
-// foreach(var tarea in tareas){
-//   //System.console.writeline(tarea.id)
-//   tarea.MostrarTarea();
-// }
 
+//Muestra todas las tareas
+foreach(var tarea in TareasPendientes){
+  tarea.MostrarTarea();
+}
+
+
+//No remover en la iteracion porque no los dejara
+//Buscar los archivos a remover y en otra iteracion removerlos?
+//Podes usar breack al encontrar pero si no se lo hace y se sigue recorriendo se rompe
 
 //encapsular el sistema de crear tareas y despues asignarlos a la lista
 List<Tarea> CrearTareas(int cantidad)
@@ -32,6 +37,9 @@ List<Tarea> CrearTareas(int cantidad)
     List <Tarea> tareas = new List<Tarea>();
     for (int i = 0; i < cantidad; i++)
     {
+        //id ingresado
+        //duracion aleatorio
+        //descripcion a ingresar
         Tarea tarea = new Tarea(i, $"decirHola {i}", i + 1);
         tareas.Add(tarea);
     }
@@ -62,8 +70,8 @@ List<Tarea> CrearTareas(int cantidad)
 // if(tareaBuscada!=null) System.console.writeline(tareaBuscada.descripcion)
 
 
-// enum EstadoTarea{
-//   Pendiente,
-//   EnCurso,
-//   Completado,
-// }
+enum EstadoTarea{
+  Pendiente,
+  EnCurso,
+  Completado,
+}
