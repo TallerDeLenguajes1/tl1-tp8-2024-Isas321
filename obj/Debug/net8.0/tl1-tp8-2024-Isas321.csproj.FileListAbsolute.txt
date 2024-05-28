@@ -1,0 +1,14 @@
+C:\Users\usuario\Documents\Taller 1\tl1-tp8-2024-Isas321\bin\Debug\net8.0\tl1-tp8-2024-Isas321.exe
+C:\Users\usuario\Documents\Taller 1\tl1-tp8-2024-Isas321\bin\Debug\net8.0\tl1-tp8-2024-Isas321.deps.json
+C:\Users\usuario\Documents\Taller 1\tl1-tp8-2024-Isas321\bin\Debug\net8.0\tl1-tp8-2024-Isas321.runtimeconfig.json
+C:\Users\usuario\Documents\Taller 1\tl1-tp8-2024-Isas321\bin\Debug\net8.0\tl1-tp8-2024-Isas321.dll
+C:\Users\usuario\Documents\Taller 1\tl1-tp8-2024-Isas321\bin\Debug\net8.0\tl1-tp8-2024-Isas321.pdb
+C:\Users\usuario\Documents\Taller 1\tl1-tp8-2024-Isas321\obj\Debug\net8.0\tl1-tp8-2024-Isas321.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\usuario\Documents\Taller 1\tl1-tp8-2024-Isas321\obj\Debug\net8.0\tl1-tp8-2024-Isas321.AssemblyInfoInputs.cache
+C:\Users\usuario\Documents\Taller 1\tl1-tp8-2024-Isas321\obj\Debug\net8.0\tl1-tp8-2024-Isas321.AssemblyInfo.cs
+C:\Users\usuario\Documents\Taller 1\tl1-tp8-2024-Isas321\obj\Debug\net8.0\tl1-tp8-2024-Isas321.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Documents\Taller 1\tl1-tp8-2024-Isas321\obj\Debug\net8.0\tl1-tp8-2024-Isas321.dll
+C:\Users\usuario\Documents\Taller 1\tl1-tp8-2024-Isas321\obj\Debug\net8.0\refint\tl1-tp8-2024-Isas321.dll
+C:\Users\usuario\Documents\Taller 1\tl1-tp8-2024-Isas321\obj\Debug\net8.0\tl1-tp8-2024-Isas321.pdb
+C:\Users\usuario\Documents\Taller 1\tl1-tp8-2024-Isas321\obj\Debug\net8.0\tl1-tp8-2024-Isas321.genruntimeconfig.cache
+C:\Users\usuario\Documents\Taller 1\tl1-tp8-2024-Isas321\obj\Debug\net8.0\ref\tl1-tp8-2024-Isas321.dll

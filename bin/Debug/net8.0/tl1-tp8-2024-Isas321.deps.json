@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "tl1-tp8-2024-Isas321/1.0.0": {
+        "runtime": {
+          "tl1-tp8-2024-Isas321.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "tl1-tp8-2024-Isas321/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
