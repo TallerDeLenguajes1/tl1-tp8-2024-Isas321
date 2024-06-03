@@ -8,7 +8,7 @@ public class Tarea{
   private int tareaID;
   private string descripcion;
   private int duracion;
-  //puedo estraer como campos y atemas crear un constructor
+  //puedo extraer como campos y ademas crear un constructor, usar el ffoco de visual studio code
 
 //Propiedades con acceso
 //Las uso para acceder a los datos que son privados, con esto mantengo el encapsulamiento
@@ -31,9 +31,22 @@ public class Tarea{
     }
 }
 
-// public class CrearTareas
-// {
-//     public CrearTareas()
-//     {
-//     }
-// }
+public class ManejadorDetareas{
+  public int duracion;
+  public string descripcion;
+  public List<Tarea> CrearTareas(int cantidad)
+  {
+      List <Tarea> tareas = new List<Tarea>();
+      Random random = new Random();
+
+      for (int i = 0; i < cantidad; i++)
+      {
+          Console.Write($"Descripcion de la tarea de ID[{i+1}]: ");
+          descripcion = Console.ReadLine();
+          duracion = random.Next(1,101);
+          Tarea tarea = new Tarea(i+1, descripcion , duracion);
+          tareas.Add(tarea);
+      }
+      return tareas;
+  }
+}
