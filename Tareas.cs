@@ -49,4 +49,14 @@ public class ManejadorDetareas{
       }
       return tareas;
   }
+
+  public Tarea ObtenerTareaPorID(List<Tarea> tareas, int ID){
+    foreach (Tarea tarea in tareas)
+    {
+      if(tarea.TareaID==ID){
+        return tarea;
+      } 
+    }
+    return null;
+  }
 }

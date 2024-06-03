@@ -9,12 +9,16 @@ int ingresaEntero(){
   }
 }
 
+
+
+
 //Para usar creacion de tareas primero la instanciare
 ManejadorDetareas manejadorDetareas = new();
 List <Tarea> TareasPendientes =new List <Tarea>();
 List <Tarea> TareasCompletadas =new List <Tarea>();
 int opcion, cantidad, id;
 string palabra;
+
 
  do
   {
@@ -29,6 +33,7 @@ string palabra;
         Console.WriteLine("\tSalir -> Presione cualquier otra tecla");
         Console.Write("Operacion elegida: ");
         opcion = ingresaEntero();
+        Console.Write("\n");
         switch (opcion)
         {
         case 1: 
@@ -40,14 +45,16 @@ string palabra;
           TareasPendientes = manejadorDetareas.CrearTareas(cantidad);
           break;
         case 2: 
-          Console.WriteLine("\nIngrese ID de la tarea que realizo: ");
+          Console.Write("\nIngrese ID de la tarea que realizo: ");
           do{
             id = ingresaEntero();
           }while(id==-999);
+          TareasCompletadas.Add(manejadorDetareas.ObtenerTareaPorID(TareasPendientes,id));
           break;
         case 3:  
           foreach(var tarea in TareasPendientes){
             tarea.MostrarTarea();
+            Console.Write("\n");
           }
           break;
         case 4: 
