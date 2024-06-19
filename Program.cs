@@ -9,14 +9,12 @@ int ingresaEntero(){
   }
 }
 
-
 //Para usar creacion de tareas primero la instanciare
 ManejadorDetareas manejadorDetareas = new();
 List <Tarea> TareasPendientes =new List <Tarea>();
 List <Tarea> TareasCompletadas =new List <Tarea>();
 int opcion, cantidad, id;
 string palabra;
-
 
  do
   {
@@ -70,15 +68,37 @@ string palabra;
           }
           break;
         case 5: 
-          Console.WriteLine("\nIngrese el ID de la tarea a buscar: ");
+          Console.Write("\nIngrese el ID de la tarea a buscar: ");
           do{
             id = ingresaEntero();
           }while(id==-999);
+
+          var tareaPendiente = manejadorDetareas.ObtenerTareaPorID(TareasPendientes, id);
+          var tareaCompletada = manejadorDetareas.ObtenerTareaPorID(TareasCompletadas, id);
+
+          if(tareaPendiente!=null){
+            Console.WriteLine("\nLa tarea se encuentra Pendiente");
+            tareaPendiente.MostrarTarea();
+          }
+          if( tareaCompletada!=null){
+            Console.WriteLine("\nLa tarea se encuentra completada");
+            tareaCompletada.MostrarTarea();
+          }
+          if(tareaPendiente==null && tareaCompletada==null){
+            Console.WriteLine("\nNo se encontro la tarea de ID buscado");
+          }
           break;
         case 6: 
           Console.WriteLine("\nPalabra clave para buscar tarea: ");
           palabra = Console.ReadLine();
-          // buscarPorPalabra(listaTareasPendientes, listaTareasRealizadas, palabra);
+
+          var tareaBuscada = manejadorDetareas.BuscarTareaPorPalabra(TareasPendientes, TareasCompletadas, palabra);
+
+          if(tareaBuscada!=null){
+            tareaBuscada.MostrarTarea();
+          } else{
+            Console.WriteLine("\nNo se encontro la tarea de ID buscado");
+          }
           break;
         default:
           Console.WriteLine("\nSaliendo del programa...\n\n");
@@ -92,38 +112,8 @@ string palabra;
 //Buscar los archivos a remover y en otra iteracion removerlos?
 //Podes usar breack al encontrar pero si no se lo hace y se sigue recorriendo se rompe
 
-//encapsular el sistema de crear tareas y despues asignarlos a la lista
-// List<Tarea> CrearTareas(int cantidad)
-// {
-//     List <Tarea> tareas = new List<Tarea>();
-//     for (int i = 0; i < cantidad; i++)
-//     {
-//         //id ingresado
-//         //duracion aleatorio
-//         //descripcion a ingresar
-//         Tarea tarea = new Tarea(i, $"decirHola {i}", i + 1);
-//         tareas.Add(tarea);
-//     }
-//     return tareas;
-// }
-// //Creao lista de tareas pendientes y completadas
-// Tareas tareaP = tareaPendiente[0]
-// tareaP.Estado1 = EstadoTarea.Completado;
-// TareasCompletadas.Add(tareaP)
-// tareaPendiente.Remove(tareaP)
-// Tarea BuscarTarea(List<Tareas> tareas, string descripcion){
-//   foreach (var tarea in tareas)
-//   {
-//     if(tarea.Descripcion.Constains(descripcion))
-//   return tarea;
-//   }
-//   return null;
-// }
-
 // //? es para decir que acepta nulo
 // Tarea? tareaBuscada = BuscarTarea(tareasPendientes, "1")
-
-// if(tareaBuscada!=null) System.console.writeline(tareaBuscada.descripcion)
 
 
 enum EstadoTarea{

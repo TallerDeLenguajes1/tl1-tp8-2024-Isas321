@@ -57,4 +57,20 @@ public class ManejadorDetareas{
     }
     return null;
   }
+
+  public Tarea BuscarTareaPorPalabra(List<Tarea> tareasPendientes, List<Tarea> tareasCompletadas, string palabra){
+    foreach (var tarea in tareasPendientes)
+    {
+      if(tarea.Descripcion.Contains(palabra)){
+        return tarea;
+      }
+    }
+        foreach (var tarea in tareasCompletadas)
+    {
+      if(tarea.Descripcion.Contains(palabra)){
+        return tarea;
+      }
+    }
+    return null;
+  }
 }
