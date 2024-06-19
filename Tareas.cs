@@ -1,8 +1,6 @@
 namespace EspacioTareas;
-
 //publica para que sea accesible para todo el proyecto
 public class Tarea{
-
   //Si no estan seteados me da error, consultar
   //Los datos son privados por defecto
   private int tareaID;

@@ -10,8 +10,6 @@ int ingresaEntero(){
 }
 
 
-
-
 //Para usar creacion de tareas primero la instanciare
 ManejadorDetareas manejadorDetareas = new();
 List <Tarea> TareasPendientes =new List <Tarea>();
@@ -52,16 +50,24 @@ string palabra;
           TareasCompletadas.Add(manejadorDetareas.ObtenerTareaPorID(TareasPendientes,id));
           break;
         case 3:  
-          foreach(var tarea in TareasPendientes){
+          if(TareasPendientes.Any()){ //Any devuelve True si hay al menos un elemento en la coleccion
+            foreach(var tarea in TareasPendientes){
             tarea.MostrarTarea();
             Console.Write("\n");
+            }
+          } else{
+            Console.WriteLine("No hay Tareas pendientes");
           }
           break;
         case 4: 
-          foreach(var tarea in TareasCompletadas){
+          if(TareasCompletadas.Any()){
+            foreach(var tarea in TareasCompletadas){
             tarea.MostrarTarea();
             Console.Write("\n");
-          }          
+            }
+          } else{
+            Console.WriteLine("No hay Tareas completadas");
+          }
           break;
         case 5: 
           Console.WriteLine("\nIngrese el ID de la tarea a buscar: ");
